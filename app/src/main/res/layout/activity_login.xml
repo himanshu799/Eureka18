@@ -17,6 +17,9 @@
             android:layout_centerHorizontal="true"
             android:src="@mipmap/logo"
             />
+
+
+
         <EditText
             android:id="@+id/Login_UserName"
             android:layout_below="@id/elogo"
