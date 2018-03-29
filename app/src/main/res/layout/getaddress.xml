@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="15dp"
+    android:background="@drawable/gradient"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -15,8 +16,9 @@
         android:id="@+id/GetAddress_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fetch Address.."
+        android:text="@string/fetch_address"
         android:textSize="50sp"
+        android:textColor="@color/black"
         />
 
     </ScrollView>
@@ -28,8 +30,9 @@
 
     <Button
         android:id="@+id/GetAddress_Btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fetch"
-        android:background="#0011fc"/>
+        android:text="@string/fetch"
+        style="@style/button"
+        android:background="@drawable/buttonstyle1"
+        android:layout_marginBottom="50dp"
+        />
 </LinearLayout>
