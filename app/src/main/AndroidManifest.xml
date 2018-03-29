@@ -24,7 +24,9 @@
         <activity android:name=".OtpForUser"/>
         <activity android:name=".GetAddress"/>
 
-        <activity android:name=".AadharCard"></activity>
+        <activity android:name=".AadharCard">
+
+        </activity>
     </application>
 
 </manifest>
