@@ -18,13 +18,17 @@
                android:layout_gravity="center">
 
 
-
+               <android.support.design.widget.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColorHint="#000000">
                <EditText
                    android:id="@+id/activity_signin_UserName"
                    style="@style/edittext"
                    android:maxLines="1"
                    android:hint="@string/user_name"
                    android:inputType="text"/>
+              </android.support.design.widget.TextInputLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -32,53 +36,93 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
+
+                        <android.support.design.widget.TextInputLayout
+                           android:theme="@style/TextAppearance.AppCompat"
+                            style="@style/equaldivi"
+                            app:hintAnimationEnabled="true"
+                          >
                         <EditText
                             android:id="@+id/activity_signin_FirstName"
-                            style="@style/equaldivi"
+                            style="@style/edittext"
                             android:hint="@string/first_name"
                             android:inputType="text"/>
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/equaldivi"
+                           >
                         <EditText
                             android:id="@+id/activity_signin_LastName"
-                            style="@style/equaldivi"
+                            style="@style/edittext"
                             android:hint="@string/last_name"
                             android:inputType="text"/>
+                        </android.support.design.widget.TextInputLayout>
+
+
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
 
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:textColorHint="#000000"
+                            android:layout_height="wrap_content" >
                         <EditText
                             android:id="@+id/activity_signin_Mobileno"
                            style="@style/edittext"
                             android:hint="@string/mobile_no"
                             android:inputType="number"/>
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#000000">
                         <EditText
                             android:id="@+id/activity_signin_Email"
                             style="@style/edittext"
                             android:hint="@string/email"
                             android:inputType="textEmailAddress"/>
-                    </LinearLayout>
+                        </android.support.design.widget.TextInputLayout>
 
+
+
+                    </LinearLayout>
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_weight="2"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal">
+
+                   <android.support.design.widget.TextInputLayout
+                       android:textColorHint="#000000"
+                       style="@style/equaldivi">
                    <EditText
                        android:id="@+id/activity_signin_Password"
-                       style="@style/equaldivi"
+                       style="@style/edittext"
                        android:hint="@string/password"
                        tools:ignore="TextFields"
                        android:inputType="textPassword"/>
+                   </android.support.design.widget.TextInputLayout>
+
+                   <android.support.design.widget.TextInputLayout
+                       android:textColorHint="#000000"
+                       style="@style/equaldivi">
                    <EditText
                         android:id="@+id/activity_signin_CPassword"
-                       style="@style/equaldivi"
+                       style="@style/edittext"
                        android:hint="@string/confirm_password"
                        android:inputType="textPassword"
                        />
+                   </android.support.design.widget.TextInputLayout>
                </LinearLayout>
-
                <Button
                    android:id="@+id/activity_signinButton"
                    style="@style/button"

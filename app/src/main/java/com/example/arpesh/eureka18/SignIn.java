@@ -1,6 +1,8 @@
 
 package com.example.arpesh.eureka18;
 
+import android.app.Activity;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -11,11 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.math.BigInteger;
 import java.util.regex.Pattern;
 
@@ -23,10 +26,11 @@ import java.util.regex.Pattern;
  * Created by arpesh on 5/2/18 3:22 AM Eureka18.
  */
 
-public class SignIn extends AppCompatActivity{
+public class SignIn extends Activity {
     private EditText InputFname, InputLname,InputMobileno, InputEmail, InputPassword ,InputCPassword,InputUserName ;
     private Button SignIn;
     private ProgressBar progressBar;
+    private Object textInputLayout;
 
 
     @Override
@@ -54,11 +58,7 @@ public class SignIn extends AppCompatActivity{
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    register();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+
                 try{sendDataToServer();}
                 catch (JSONException e){
                     e.printStackTrace();
@@ -66,16 +66,8 @@ public class SignIn extends AppCompatActivity{
             }
         });
     }
-    public void register() throws  JSONException
-    {
-        FormatDataASJSon();
-        if(!validate())
-        {
-            Toast.makeText(this,"Signup has Failed",Toast.LENGTH_SHORT).show();
-            onDestroy();
-        }
 
-    }
+
 
     public boolean validate()
     {
@@ -120,12 +112,14 @@ public class SignIn extends AppCompatActivity{
         return valid;
     }
     private void sendDataToServer() throws JSONException {
-        String type = "register";
-
-        final String Json = FormatDataASJSon();
-        BackgroundWorker ObjBackgroundWorker = new BackgroundWorker(getApplicationContext());
-        ObjBackgroundWorker.Views(progressBar);
-        ObjBackgroundWorker.execute(type,Json);
+       if(validate())
+       {
+           String type = "register";
+           final String Json = FormatDataASJSon();
+           BackgroundWorker ObjBackgroundWorker = new BackgroundWorker(getApplicationContext());
+           ObjBackgroundWorker.Views(progressBar);
+           ObjBackgroundWorker.execute(type,Json);
+       }
 
     }
 

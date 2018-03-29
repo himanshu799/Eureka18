@@ -3,11 +3,11 @@
 <item>
     <shape>
         <size android:width="2dp"
-            android:height="20dp">
 
-        </size>
+            android:height="20dp"></size>
+ 
+
         <solid android:color="#000000">
-
         </solid>
     </shape>
 </item>

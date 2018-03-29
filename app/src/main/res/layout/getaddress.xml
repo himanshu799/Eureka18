@@ -30,9 +30,11 @@
 
     <Button
         android:id="@+id/GetAddress_Btn"
+
         android:text="@string/fetch"
         style="@style/button"
         android:background="@drawable/buttonstyle1"
         android:layout_marginBottom="50dp"
         />
+
 </LinearLayout>

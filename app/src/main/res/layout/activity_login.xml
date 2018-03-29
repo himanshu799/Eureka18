@@ -12,6 +12,7 @@
 
         <ImageView
             android:id="@+id/elogo"
+
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_centerHorizontal="true"
@@ -28,6 +29,7 @@
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:padding="8dp"
+
             style="@style/edittext.login_edittext"
             android:drawableLeft="@drawable/ic_person"/>
 
@@ -45,27 +47,34 @@
             android:inputType="textPassword"
             android:padding="8dp" />
 
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@id/Login_UserName"
             android:layout_marginLeft="10dp"
+
             android:background="@color/black"
             android:id="@+id/view" />
+
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_below="@+id/Login_password"
             android:layout_marginLeft="10dp"
+
             android:background="@color/black" />
+
 
 
         <Button
             android:id="@+id/LoginButton"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/Login_password"
+
             android:layout_marginTop="30dp"
             android:background="@drawable/buttonstyle1"
             android:clickable="true"
@@ -81,8 +90,10 @@
             android:background="@drawable/buttonstyle1"
             android:clickable="true"
             android:text="sign IN"
+
             style="@style/button"
             android:focusable="true"/>
+
 
 
         <ProgressBar
